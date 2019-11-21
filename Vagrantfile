@@ -65,9 +65,9 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    apt-get install software-properties-common
+    apt-get install software-properties-common -y
     apt-add-repository --yes --update ppa:ansible/ansible
-    apt-get install ansible
+    apt-get install ansible -y
   SHELL
 
 end
